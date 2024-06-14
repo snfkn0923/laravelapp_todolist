@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('to_do_lists', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->date('start_date');
-            $table->time('start_time')->nullable();
             $table->string('description')->nullable();
-            // $table->integer('status')->default(0);
             $table->tinyInteger('isDone')->default(0);
             $table->timestamps();
         });
